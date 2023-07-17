@@ -1,3 +1,4 @@
+# Add a bot token, rename to .env & place in the root folder 'squadronBot'.
 APP_ID = 1103658073203155075
 TOKEN = ""
 
