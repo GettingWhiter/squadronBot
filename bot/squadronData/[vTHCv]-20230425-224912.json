@@ -1,0 +1,884 @@
+{
+    "time": "2023/04/25, 22:49:12",
+    "tag": "[vTHCv]",
+    "name": "Try Hard Coalition Social",
+    "playerCount": "125",
+    "description": "\u2593  Try Hard Coalition: Social (vTHCv) is a Squadron Realistic Events (SREs/SqBs) focused squadron with a more relaxed approach than many other top squads.  \n\u250c   Requirements: ages 18+, use of discord and a mic, RB experience, access to at least one rank 7 tech tree vehicle - ideally ground.\n\n<b>To apply, join: discord.gg/TryHarder and follow the provided instructions. DO NOT just apply in game! \u25a0</b>",
+    "creationDate": "28.10.2018",
+    "points": "29885",
+    "activity": "252559",
+    "airKills": "2647",
+    "groundKills": "1241",
+    "deaths": "4206",
+    "timePlayed": "12.9 d",
+    "players": [
+        {
+            "name": "tomyfrags",
+            "points": "1510",
+            "activity": "3240",
+            "role": "Sergeant",
+            "joinDate": "03.11.2019"
+        },
+        {
+            "name": "robert__white",
+            "points": "704",
+            "activity": "612",
+            "role": "Commander",
+            "joinDate": "03.11.2019"
+        },
+        {
+            "name": "mobiusn1",
+            "points": "1551",
+            "activity": "0",
+            "role": "Officer",
+            "joinDate": "16.12.2019"
+        },
+        {
+            "name": "GREGallOVER",
+            "points": "1049",
+            "activity": "3417",
+            "role": "Private",
+            "joinDate": "02.07.2020"
+        },
+        {
+            "name": "XtrianglemanX",
+            "points": "250",
+            "activity": "97",
+            "role": "Private",
+            "joinDate": "09.12.2020"
+        },
+        {
+            "name": "Strike_1905",
+            "points": "252",
+            "activity": "2880",
+            "role": "Sergeant",
+            "joinDate": "01.01.2021"
+        },
+        {
+            "name": "L4RRYIV@live",
+            "points": "125",
+            "activity": "1744",
+            "role": "Deputy",
+            "joinDate": "16.01.2021"
+        },
+        {
+            "name": "Zuneza_C",
+            "points": "460",
+            "activity": "2686",
+            "role": "Sergeant",
+            "joinDate": "08.04.2021"
+        },
+        {
+            "name": "RagePhoenix",
+            "points": "1454",
+            "activity": "2160",
+            "role": "Private",
+            "joinDate": "15.04.2021"
+        },
+        {
+            "name": "Jamesth007",
+            "points": "0",
+            "activity": "2756",
+            "role": "Private",
+            "joinDate": "16.04.2021"
+        },
+        {
+            "name": "LEO2a6",
+            "points": "1271",
+            "activity": "2160",
+            "role": "Private",
+            "joinDate": "08.05.2021"
+        },
+        {
+            "name": "___Heisenberg_00",
+            "points": "1449",
+            "activity": "1082",
+            "role": "Private",
+            "joinDate": "17.05.2021"
+        },
+        {
+            "name": "Lmaowkwkwk",
+            "points": "398",
+            "activity": "3020",
+            "role": "Private",
+            "joinDate": "19.06.2021"
+        },
+        {
+            "name": "Kilrevan",
+            "points": "0",
+            "activity": "2880",
+            "role": "Sergeant",
+            "joinDate": "09.07.2021"
+        },
+        {
+            "name": "AceValiant",
+            "points": "440",
+            "activity": "0",
+            "role": "Sergeant",
+            "joinDate": "14.07.2021"
+        },
+        {
+            "name": "ThunderChicken47",
+            "points": "648",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "19.07.2021"
+        },
+        {
+            "name": "Fox4Supremacy",
+            "points": "1458",
+            "activity": "3240",
+            "role": "Officer",
+            "joinDate": "01.11.2021"
+        },
+        {
+            "name": "cftaurus2007",
+            "points": "0",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "03.11.2021"
+        },
+        {
+            "name": "Hads__tk",
+            "points": "248",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "14.12.2021"
+        },
+        {
+            "name": "TeufelEvon",
+            "points": "1388",
+            "activity": "2160",
+            "role": "Private",
+            "joinDate": "21.12.2021"
+        },
+        {
+            "name": "SpicyChiiip5823",
+            "points": "1455",
+            "activity": "2880",
+            "role": "Private",
+            "joinDate": "24.12.2021"
+        },
+        {
+            "name": "eatleadsuckers",
+            "points": "1531",
+            "activity": "1440",
+            "role": "Private",
+            "joinDate": "01.01.2022"
+        },
+        {
+            "name": "Dazzar1",
+            "points": "118",
+            "activity": "1856",
+            "role": "Private",
+            "joinDate": "01.01.2022"
+        },
+        {
+            "name": "CubanCharm",
+            "points": "54",
+            "activity": "2520",
+            "role": "Private",
+            "joinDate": "20.01.2022"
+        },
+        {
+            "name": "OhDan",
+            "points": "239",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "01.03.2022"
+        },
+        {
+            "name": "The_Asian_Ace",
+            "points": "1493",
+            "activity": "3466",
+            "role": "Sergeant",
+            "joinDate": "02.03.2022"
+        },
+        {
+            "name": "boxofstuff24178",
+            "points": "191",
+            "activity": "1649",
+            "role": "Private",
+            "joinDate": "26.04.2022"
+        },
+        {
+            "name": "Davix32",
+            "points": "126",
+            "activity": "2674",
+            "role": "Private",
+            "joinDate": "02.06.2022"
+        },
+        {
+            "name": "St0rm1n",
+            "points": "463",
+            "activity": "3308",
+            "role": "Private",
+            "joinDate": "06.06.2022"
+        },
+        {
+            "name": "Robarto",
+            "points": "0",
+            "activity": "0",
+            "role": "Sergeant",
+            "joinDate": "15.06.2022"
+        },
+        {
+            "name": "Jwaeren",
+            "points": "0",
+            "activity": "3412",
+            "role": "Private",
+            "joinDate": "19.06.2022"
+        },
+        {
+            "name": "_SenorFluffy_",
+            "points": "0",
+            "activity": "3070",
+            "role": "Private",
+            "joinDate": "25.06.2022"
+        },
+        {
+            "name": "General_Winter44",
+            "points": "610",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "02.07.2022"
+        },
+        {
+            "name": "stclaus4",
+            "points": "0",
+            "activity": "2905",
+            "role": "Private",
+            "joinDate": "29.07.2022"
+        },
+        {
+            "name": "Raptoid22",
+            "points": "1405",
+            "activity": "2742",
+            "role": "Private",
+            "joinDate": "09.08.2022"
+        },
+        {
+            "name": "NightmareDaydrm",
+            "points": "60",
+            "activity": "3320",
+            "role": "Private",
+            "joinDate": "13.08.2022"
+        },
+        {
+            "name": "Roadieboy@psn",
+            "points": "500",
+            "activity": "2769",
+            "role": "Officer",
+            "joinDate": "21.08.2022"
+        },
+        {
+            "name": "St\u0430rscream",
+            "points": "1223",
+            "activity": "3122",
+            "role": "Private",
+            "joinDate": "30.08.2022"
+        },
+        {
+            "name": "Appy94",
+            "points": "1291",
+            "activity": "3360",
+            "role": "Private",
+            "joinDate": "06.09.2022"
+        },
+        {
+            "name": "TheBlackAries",
+            "points": "369",
+            "activity": "3327",
+            "role": "Private",
+            "joinDate": "08.09.2022"
+        },
+        {
+            "name": "billy12345678912",
+            "points": "0",
+            "activity": "905",
+            "role": "Private",
+            "joinDate": "08.09.2022"
+        },
+        {
+            "name": "ANunWithAGun",
+            "points": "191",
+            "activity": "3554",
+            "role": "Private",
+            "joinDate": "10.09.2022"
+        },
+        {
+            "name": "Speedyman_NL",
+            "points": "0",
+            "activity": "1597",
+            "role": "Private",
+            "joinDate": "10.09.2022"
+        },
+        {
+            "name": "VenomVX",
+            "points": "0",
+            "activity": "2953",
+            "role": "Private",
+            "joinDate": "15.09.2022"
+        },
+        {
+            "name": "Accerose",
+            "points": "1366",
+            "activity": "3490",
+            "role": "Private",
+            "joinDate": "16.09.2022"
+        },
+        {
+            "name": "Dean_G",
+            "points": "179",
+            "activity": "524",
+            "role": "Private",
+            "joinDate": "18.09.2022"
+        },
+        {
+            "name": "Kael_PT",
+            "points": "1518",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "18.09.2022"
+        },
+        {
+            "name": "cazador4278643",
+            "points": "584",
+            "activity": "1660",
+            "role": "Private",
+            "joinDate": "18.09.2022"
+        },
+        {
+            "name": "MicrosoftClient",
+            "points": "0",
+            "activity": "41",
+            "role": "Private",
+            "joinDate": "22.09.2022"
+        },
+        {
+            "name": "andrewthewacko",
+            "points": "457",
+            "activity": "479",
+            "role": "Private",
+            "joinDate": "23.09.2022"
+        },
+        {
+            "name": "ManBurner",
+            "points": "0",
+            "activity": "2970",
+            "role": "Private",
+            "joinDate": "23.09.2022"
+        },
+        {
+            "name": "McBiggins",
+            "points": "1367",
+            "activity": "744",
+            "role": "Private",
+            "joinDate": "29.09.2022"
+        },
+        {
+            "name": "RockFish61",
+            "points": "1013",
+            "activity": "2754",
+            "role": "Sergeant",
+            "joinDate": "06.10.2022"
+        },
+        {
+            "name": "Krieger-421@psn",
+            "points": "0",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "13.10.2022"
+        },
+        {
+            "name": "Haxxor_Heresy",
+            "points": "1145",
+            "activity": "1910",
+            "role": "Private",
+            "joinDate": "24.10.2022"
+        },
+        {
+            "name": "daskalott",
+            "points": "206",
+            "activity": "96",
+            "role": "Private",
+            "joinDate": "25.10.2022"
+        },
+        {
+            "name": "nimble1776",
+            "points": "0",
+            "activity": "360",
+            "role": "Private",
+            "joinDate": "28.10.2022"
+        },
+        {
+            "name": "Ononoki_Yotsugi",
+            "points": "0",
+            "activity": "754",
+            "role": "Private",
+            "joinDate": "31.10.2022"
+        },
+        {
+            "name": "crost_swords",
+            "points": "0",
+            "activity": "1504",
+            "role": "Private",
+            "joinDate": "01.11.2022"
+        },
+        {
+            "name": "MaceMan805",
+            "points": "0",
+            "activity": "1604",
+            "role": "Private",
+            "joinDate": "07.11.2022"
+        },
+        {
+            "name": "That_Nightmare",
+            "points": "588",
+            "activity": "400",
+            "role": "Private",
+            "joinDate": "10.11.2022"
+        },
+        {
+            "name": "Mr_Tutle",
+            "points": "1025",
+            "activity": "921",
+            "role": "Private",
+            "joinDate": "10.11.2022"
+        },
+        {
+            "name": "RokesDrift",
+            "points": "0",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "14.11.2022"
+        },
+        {
+            "name": "ResisT I@live",
+            "points": "178",
+            "activity": "1627",
+            "role": "Private",
+            "joinDate": "18.11.2022"
+        },
+        {
+            "name": "Evir_",
+            "points": "370",
+            "activity": "2777",
+            "role": "Private",
+            "joinDate": "22.12.2022"
+        },
+        {
+            "name": "The_Lieutenant",
+            "points": "859",
+            "activity": "3521",
+            "role": "Private",
+            "joinDate": "28.12.2022"
+        },
+        {
+            "name": "Eagleislove",
+            "points": "217",
+            "activity": "3144",
+            "role": "Private",
+            "joinDate": "28.12.2022"
+        },
+        {
+            "name": "milord_2018",
+            "points": "0",
+            "activity": "2413",
+            "role": "Private",
+            "joinDate": "30.12.2022"
+        },
+        {
+            "name": "TheJoyKiller",
+            "points": "93",
+            "activity": "1781",
+            "role": "Private",
+            "joinDate": "31.12.2022"
+        },
+        {
+            "name": "Cellinia_Texas",
+            "points": "1404",
+            "activity": "3600",
+            "role": "Sergeant",
+            "joinDate": "01.01.2023"
+        },
+        {
+            "name": "ghost_panther",
+            "points": "806",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "01.01.2023"
+        },
+        {
+            "name": "BroForce_999",
+            "points": "1326",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "01.01.2023"
+        },
+        {
+            "name": "Pandex",
+            "points": "0",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "01.01.2023"
+        },
+        {
+            "name": "wrofflestomp",
+            "points": "0",
+            "activity": "836",
+            "role": "Private",
+            "joinDate": "02.01.2023"
+        },
+        {
+            "name": "Snip_69",
+            "points": "0",
+            "activity": "292",
+            "role": "Officer",
+            "joinDate": "03.01.2023"
+        },
+        {
+            "name": "YichenG",
+            "points": "0",
+            "activity": "142",
+            "role": "Private",
+            "joinDate": "04.01.2023"
+        },
+        {
+            "name": "darkBudz",
+            "points": "94",
+            "activity": "1655",
+            "role": "Private",
+            "joinDate": "04.01.2023"
+        },
+        {
+            "name": "Shaak__Ti",
+            "points": "151",
+            "activity": "2407",
+            "role": "Private",
+            "joinDate": "07.01.2023"
+        },
+        {
+            "name": "Oktoeight",
+            "points": "0",
+            "activity": "345",
+            "role": "Private",
+            "joinDate": "07.01.2023"
+        },
+        {
+            "name": "AwakenShadows@psn",
+            "points": "25",
+            "activity": "3207",
+            "role": "Private",
+            "joinDate": "08.01.2023"
+        },
+        {
+            "name": "Darkett",
+            "points": "0",
+            "activity": "793",
+            "role": "Private",
+            "joinDate": "12.01.2023"
+        },
+        {
+            "name": "Ivanovich202",
+            "points": "0",
+            "activity": "443",
+            "role": "Private",
+            "joinDate": "12.01.2023"
+        },
+        {
+            "name": "SovietKlim77",
+            "points": "564",
+            "activity": "10",
+            "role": "Private",
+            "joinDate": "15.01.2023"
+        },
+        {
+            "name": "IHighTreasonI@psn",
+            "points": "300",
+            "activity": "2898",
+            "role": "Private",
+            "joinDate": "17.01.2023"
+        },
+        {
+            "name": "TheLegenDary",
+            "points": "0",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "18.01.2023"
+        },
+        {
+            "name": "Whitehouse_",
+            "points": "0",
+            "activity": "2160",
+            "role": "Private",
+            "joinDate": "24.01.2023"
+        },
+        {
+            "name": "Maximusmime11",
+            "points": "0",
+            "activity": "1974",
+            "role": "Private",
+            "joinDate": "02.02.2023"
+        },
+        {
+            "name": "PETWUSSY",
+            "points": "0",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "08.02.2023"
+        },
+        {
+            "name": "ApostleOfChrysus",
+            "points": "1281",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "10.02.2023"
+        },
+        {
+            "name": "KeNNyX",
+            "points": "866",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "12.02.2023"
+        },
+        {
+            "name": "KimJongYoon",
+            "points": "0",
+            "activity": "2689",
+            "role": "Private",
+            "joinDate": "14.02.2023"
+        },
+        {
+            "name": "LimpDragoon",
+            "points": "1075",
+            "activity": "2880",
+            "role": "Private",
+            "joinDate": "19.02.2023"
+        },
+        {
+            "name": "natedogg2040",
+            "points": "31",
+            "activity": "3321",
+            "role": "Private",
+            "joinDate": "21.02.2023"
+        },
+        {
+            "name": "AverinDreams",
+            "points": "64",
+            "activity": "1064",
+            "role": "Private",
+            "joinDate": "21.02.2023"
+        },
+        {
+            "name": "ThottoVonThicc",
+            "points": "213",
+            "activity": "1428",
+            "role": "Private",
+            "joinDate": "23.02.2023"
+        },
+        {
+            "name": "Yvayne",
+            "points": "0",
+            "activity": "0",
+            "role": "Private",
+            "joinDate": "24.02.2023"
+        },
+        {
+            "name": "Tnab3r",
+            "points": "0",
+            "activity": "2296",
+            "role": "Private",
+            "joinDate": "25.02.2023"
+        },
+        {
+            "name": "Shpiff",
+            "points": "439",
+            "activity": "593",
+            "role": "Private",
+            "joinDate": "28.02.2023"
+        },
+        {
+            "name": "Last_Gunfighter_",
+            "points": "1395",
+            "activity": "3240",
+            "role": "Private",
+            "joinDate": "01.03.2023"
+        },
+        {
+            "name": "MaveRick1776696@live",
+            "points": "215",
+            "activity": "1694",
+            "role": "Private",
+            "joinDate": "01.03.2023"
+        },
+        {
+            "name": "Teddy91",
+            "points": "1344",
+            "activity": "1447",
+            "role": "Private",
+            "joinDate": "01.03.2023"
+        },
+        {
+            "name": "Bad_Terminator",
+            "points": "62",
+            "activity": "2940",
+            "role": "Private",
+            "joinDate": "01.03.2023"
+        },
+        {
+            "name": "MythicPi",
+            "points": "31",
+            "activity": "2767",
+            "role": "Private",
+            "joinDate": "02.03.2023"
+        },
+        {
+            "name": "Zarahar",
+            "points": "493",
+            "activity": "360",
+            "role": "Private",
+            "joinDate": "03.03.2023"
+        },
+        {
+            "name": "MacGyver_PL",
+            "points": "1411",
+            "activity": "2162",
+            "role": "Private",
+            "joinDate": "04.03.2023"
+        },
+        {
+            "name": "_crescentmoon_",
+            "points": "246",
+            "activity": "3240",
+            "role": "Private",
+            "joinDate": "05.03.2023"
+        },
+        {
+            "name": "otomai",
+            "points": "248",
+            "activity": "4",
+            "role": "Private",
+            "joinDate": "10.03.2023"
+        },
+        {
+            "name": "ZacattackG",
+            "points": "441",
+            "activity": "1460",
+            "role": "Private",
+            "joinDate": "10.03.2023"
+        },
+        {
+            "name": "RumGuy",
+            "points": "794",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "11.03.2023"
+        },
+        {
+            "name": "THEQUESTFORBEER",
+            "points": "918",
+            "activity": "2312",
+            "role": "Private",
+            "joinDate": "12.03.2023"
+        },
+        {
+            "name": "V9_Too_Devlish_",
+            "points": "0",
+            "activity": "1264",
+            "role": "Private",
+            "joinDate": "14.03.2023"
+        },
+        {
+            "name": "jurgen61503",
+            "points": "856",
+            "activity": "2040",
+            "role": "Private",
+            "joinDate": "14.03.2023"
+        },
+        {
+            "name": "_Sumedh_",
+            "points": "1307",
+            "activity": "3213",
+            "role": "Private",
+            "joinDate": "15.03.2023"
+        },
+        {
+            "name": "code_t",
+            "points": "0",
+            "activity": "3056",
+            "role": "Private",
+            "joinDate": "15.03.2023"
+        },
+        {
+            "name": "samsiee",
+            "points": "1297",
+            "activity": "3385",
+            "role": "Private",
+            "joinDate": "17.03.2023"
+        },
+        {
+            "name": "_Wolfsangel_HEAT",
+            "points": "0",
+            "activity": "1080",
+            "role": "Private",
+            "joinDate": "21.03.2023"
+        },
+        {
+            "name": "Custom_Gaming",
+            "points": "403",
+            "activity": "2119",
+            "role": "Private",
+            "joinDate": "22.03.2023"
+        },
+        {
+            "name": "RenegadeOfChaos",
+            "points": "90",
+            "activity": "3600",
+            "role": "Private",
+            "joinDate": "23.03.2023"
+        },
+        {
+            "name": "Tubz94",
+            "points": "0",
+            "activity": "1710",
+            "role": "Private",
+            "joinDate": "23.03.2023"
+        },
+        {
+            "name": "Miles_Long",
+            "points": "157",
+            "activity": "2027",
+            "role": "Private",
+            "joinDate": "24.03.2023"
+        },
+        {
+            "name": "_AlexV",
+            "points": "0",
+            "activity": "1800",
+            "role": "Private",
+            "joinDate": "09.04.2023"
+        },
+        {
+            "name": "Dry__Toast",
+            "points": "0",
+            "activity": "1329",
+            "role": "Private",
+            "joinDate": "13.04.2023"
+        },
+        {
+            "name": "bambambalu",
+            "points": "0",
+            "activity": "1080",
+            "role": "Private",
+            "joinDate": "15.04.2023"
+        },
+        {
+            "name": "IonExchange",
+            "points": "0",
+            "activity": "1080",
+            "role": "Private",
+            "joinDate": "15.04.2023"
+        }
+    ]
+}
