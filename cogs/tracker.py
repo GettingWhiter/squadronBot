@@ -13,7 +13,6 @@ import asyncio
 from discord.ext import commands
 from discord import app_commands
 from discord.app_commands import Choice
-from typing import Optional
 from decouple import config
 
 from cogs.helpers import gather, check
@@ -34,7 +33,7 @@ class tracker_class(commands.Cog):
     ]
 
     # Declare that this command is a hybrid command. Aliases allow the command to be called in discord using a different name.
-    @commands.hybrid_command(name="tracker", description="Controls the logging functionality of the bot that many other functions are dependant on.", aliases=["s"])
+    @commands.hybrid_command(name="tracker", description="Start/Stop the logging functionality of the bot.", aliases=["s"])
     # Add cooldown to your command.
     @commands.cooldown(1, 15.0, commands.BucketType.user)
     # Declare that only owner may use this command.
@@ -45,8 +44,6 @@ class tracker_class(commands.Cog):
     @app_commands.describe(switch="Select a parameter")
     # Give a list of parameters accepted.
     @app_commands.choices(switch=switch_list)
-    # Sync command to a server. Remove this if you want to make it global.
-    #@app_commands.guilds(123) # Replace 123 with the server id.
     async def tracker(self, ctx: commands.Context, switch: str):
         match switch:
             case 'start': 
@@ -63,15 +60,12 @@ class tracker_class(commands.Cog):
 
     @tracker.error
     async def error(self, ctx, error: commands.CommandError):
-        # Triggers when user omitted and argument.
+        # Triggers when user omitted an argument.
         if isinstance(error, commands.MissingRequiredArgument):
             return await ctx.send("Missing argument. `?c <fruits>, <optional_msg>`")
         # Triggers when user is on cooldown.
         elif isinstance(error, commands.CommandOnCooldown):
-            timeRemaining = str(
-                datetime.timedelta(
-                    seconds=int(error.retry_after))
-            )
+            timeRemaining = str(datetime.timedelta(seconds=int(error.retry_after)))
             await ctx.send(
                 f"Please wait `{timeRemaining}` to execute this command again.", ephemeral=True)
         # Triggers if user is not bot owner.
@@ -106,7 +100,7 @@ async def scheduler(self):
 
         # Current GMTime is between 14-22, thus EU session is active.
         if currentTime.tm_hour >= 14 and currentTime.tm_hour < 22 or (currentTime.tm_hour == 22 and currentTime.tm_min <= 15):
-            # If this is the first loop within the EU bracket, post a new message to the log channel,
+            # If this is the first loop within the EU bracket, post a new message to the log channel.
             if not active:
                 sessionDate = (f"EU Session - {currentTime.tm_mday}/{currentTime.tm_mon}/{currentTime.tm_year}")
                 for squadron in squadronList:
