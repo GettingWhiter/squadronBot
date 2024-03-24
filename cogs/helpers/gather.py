@@ -1,6 +1,6 @@
 # Discord bot for WT Squadrons by Robert White
 
-# 08/06/23
+# 08/06/23 - 23/03/24
 # Collection of helper functions for gathering, parsing and 
 # objectifiying squadron data from the War Thunder website.
 
@@ -11,6 +11,8 @@
 import re # Regular expressions, yeehaw - parser() function.
 import json # Used to store organised object data parsed and assembled from the HTML source in the parser() function.
 import requests # Requests module used for webscraping in the scraper() function.
+import asyncio
+import aiohttp # async replacement of requests
 import datetime
 import time
 from bs4 import BeautifulSoup
@@ -66,6 +68,32 @@ def scraper(url):
                     print(f"Scraper unable to retrieve usable data, aborting.")
                     return
         except (requests.exceptions.Timeout, requests.exceptions.ReadTimeout):
+            print('Timeout raised and caught.')
+            return
+        except Exception as e:
+            print(f"Error raised in 'gather.scraper' function: {e}")
+        return
+
+# Scrapes data from the provided URL asyncronously. (TODO: consider using callbacks in this to make the function more readily usable)
+async def asyncScraper(url):
+        try:
+            retries = 0
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, timeout=60) as response:
+                    content = BeautifulSoup(response.content, "lxml") #print(response)
+
+            if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
+                return parser(content)
+            else:
+                if retries <= 15:
+                    print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
+                    retries += 1
+                    time.sleep(config("RETRY_INTERVAL"))
+                    asyncScraper(url)
+                else:
+                    print(f"Scraper unable to retrieve usable data, aborting.")
+                    return
+        except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
             print('Timeout raised and caught.')
             return
         except Exception as e:
