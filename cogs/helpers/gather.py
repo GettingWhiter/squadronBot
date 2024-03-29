@@ -22,28 +22,29 @@ from decouple import config
 # -----
 
 # Saves the resultant squadronInfo from a scraper call to a JSON file.
-def saveData(squadron):
-    squadronInfo = getData(squadron)
-    # Export squadronInfo as squadronData.json
+async def saveData(squadron):
+    squadronInfo = await getData(squadron)
+    # Export squadronInfo as squadronData.json 
+    # TODO: create a folder if one does not already exist
     filePath = 'squadronData/' + squadronInfo['tag'] + datetime.datetime.now().strftime("-%Y%m%d-%H%M%S") +'.json'
     with open(filePath, 'w') as outfile:
         json.dump(squadronInfo, outfile, indent = 4)
     return filePath
 
 # Forms a complete URL pointing to the appropriate squadron page, then calls the scraper function using said URL.
-def getData(squadron):
+async def getData(squadron):
     match squadron.lower():
         case '':
             #TODO: Make this an error.
             print('Error - No identifier set, please enter one of the following: ("Comp", "Social", "Casual" or "Legacy").')
         case 'xthcx': #comp
-            return scraper(config("BASE_URL") + config("COMP_SUFFIX"))
+            return await asyncScraper(config("BASE_URL") + config("COMP_SUFFIX"))
         case 'vthcv': #social
-            return scraper(config("BASE_URL") + config("SOCIAL_SUFFIX"))
+            return await asyncScraper(config("BASE_URL") + config("SOCIAL_SUFFIX"))
         case 'xthcv': #casual
-            return scraper(config("BASE_URL") + config("CASUAL_SUFFIX"))
+            return await asyncScraper(config("BASE_URL") + config("CASUAL_SUFFIX"))
         case 'vthcx': #legacy
-            return scraper(config("BASE_URL") + config("LEGACY_SUFFIX"))
+            return await asyncScraper(config("BASE_URL") + config("LEGACY_SUFFIX"))
         case _:
             #TODO: Make this an error.
             print('The squadron name (' + squadron + ') is not supported.')
@@ -89,15 +90,15 @@ async def asyncScraper(url):
                     print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
                     retries += 1
                     time.sleep(config("RETRY_INTERVAL"))
-                    asyncScraper(url)
+                    await asyncScraper(url)
                 else:
                     print(f"Scraper unable to retrieve usable data, aborting.")
                     return
-        except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
-            print('Timeout raised and caught.')
-            return
+        #except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
+        #    print('Timeout raised and caught.')
+        #    return
         except Exception as e:
-            print(f"Error raised in 'gather.scraper' function: {e}")
+            await print(f"Error raised in 'gather.scraper' function: {e}")
         return
 
 # Parser for content scraped from the War Thunder squadron pages
