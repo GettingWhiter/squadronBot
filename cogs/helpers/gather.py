@@ -2,7 +2,7 @@
 
 # 08/06/23 - 23/03/24
 # Collection of helper functions for gathering, parsing and 
-# objectifiying squadron data from the War Thunder website.
+# objectifying squadron data from the War Thunder website.
 
 
 # Requires requests, bs4 and lxml to be installed.
@@ -10,9 +10,8 @@
 # Imports
 import re # Regular expressions, yeehaw - parser() function.
 import json # Used to store organised object data parsed and assembled from the HTML source in the parser() function.
-import requests # Requests module used for webscraping in the scraper() function.
 import asyncio
-import aiohttp # async replacement of requests
+import aiohttp # async replacement of requests, used for webscraping in the scraper() function.
 import datetime
 import time
 from bs4 import BeautifulSoup
@@ -38,47 +37,21 @@ async def getData(squadron):
             #TODO: Make this an error.
             print('Error - No identifier set, please enter one of the following: ("Comp", "Social", "Casual" or "Legacy").')
         case 'xthcx': #comp
-            return await asyncScraper(config("BASE_URL") + config("COMP_SUFFIX"))
+            return await scraper(config("BASE_URL") + config("COMP_SUFFIX"))
         case 'vthcv': #social
-            return await asyncScraper(config("BASE_URL") + config("SOCIAL_SUFFIX"))
+            return await scraper(config("BASE_URL") + config("SOCIAL_SUFFIX"))
         case 'xthcv': #casual
-            return await asyncScraper(config("BASE_URL") + config("CASUAL_SUFFIX"))
+            return await scraper(config("BASE_URL") + config("CASUAL_SUFFIX"))
         case 'vthcx': #legacy
-            return await asyncScraper(config("BASE_URL") + config("LEGACY_SUFFIX"))
+            return await scraper(config("BASE_URL") + config("LEGACY_SUFFIX"))
         case _:
             #TODO: Make this an error.
             print('The squadron name (' + squadron + ') is not supported.')
     return
 
-# Scrapes data from the provided URL (TODO: consider using callbacks in this to make the function more readily usable)
-def scraper(url):
+# Scrapes data from the provided URL asyncronously. (TODO: consider using callbacks to make the function more re-usable)
+async def scraper(url):
         try:
-            retries = 0
-            response = requests.get(url, timeout=60)
-            #print(response)
-            content = BeautifulSoup(response.content, "lxml")
-            if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
-                return parser(content)
-            else:
-                if retries <= 15:
-                    print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
-                    retries += 1
-                    time.sleep(config("RETRY_INTERVAL"))
-                    scraper(url)
-                else:
-                    print(f"Scraper unable to retrieve usable data, aborting.")
-                    return
-        except (requests.exceptions.Timeout, requests.exceptions.ReadTimeout):
-            print('Timeout raised and caught.')
-            return
-        except Exception as e:
-            print(f"Error raised in 'gather.scraper' function: {e}")
-        return
-
-# Scrapes data from the provided URL asyncronously. (TODO: consider using callbacks in this to make the function more readily usable)
-async def asyncScraper(url):
-        try:
-            retries = 0
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=60) as response:
                     content = BeautifulSoup(await response.text(), "lxml")
@@ -86,14 +59,10 @@ async def asyncScraper(url):
             if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
                 return parser(content)
             else:
-                if retries <= 15:
-                    print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
-                    retries += 1
-                    asyncio.sleep(config("RETRY_INTERVAL"))
-                    await asyncScraper(url)
-                else:
-                    print(f"Scraper unable to retrieve usable data, aborting.")
-                    return
+                print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
+                asyncio.sleep(config("RETRY_INTERVAL"))
+                await scraper(url)
+
         #except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
         #    print('Timeout raised and caught.')
         #    return
