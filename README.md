@@ -6,7 +6,7 @@ This branch is version 2, with a few improvements to some aspects before the add
 
 <b>Setup</b>
 
-Create the virtual enviornment, open a command prompt and type: 
+Create the virtual environment, open a command prompt and type: 
 
 python -m venv c:\squadronBot\venv
 
