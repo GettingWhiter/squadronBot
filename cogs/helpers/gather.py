@@ -81,7 +81,7 @@ async def asyncScraper(url):
             retries = 0
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=60) as response:
-                    content = BeautifulSoup(response.content, "lxml") #print(response)
+                    content = BeautifulSoup(await response.text(), "lxml")
 
             if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
                 return parser(content)
@@ -89,7 +89,7 @@ async def asyncScraper(url):
                 if retries <= 15:
                     print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
                     retries += 1
-                    time.sleep(config("RETRY_INTERVAL"))
+                    asyncio.sleep(config("RETRY_INTERVAL"))
                     await asyncScraper(url)
                 else:
                     print(f"Scraper unable to retrieve usable data, aborting.")
