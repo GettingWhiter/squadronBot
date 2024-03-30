@@ -104,7 +104,7 @@ async def scheduler(self):
             if not active:
                 sessionDate = (f"EU Session - {currentTime.tm_mday}/{currentTime.tm_mon}/{currentTime.tm_year}")
                 for squadron in squadronList:
-                    squadron['data'] = gather.getData(squadron['tag'])
+                    squadron['data'] = await gather.getData(squadron['tag'])
                     squadron['wins'] = 0
                     squadron['losses'] = 0
                     squadron['startingPoints'] = str(squadron['data']['points'])
@@ -116,7 +116,7 @@ async def scheduler(self):
             for squadron in squadronList:
                 formattedTime = (f"{str(currentTime.tm_hour).rjust(2, '0')}:{str(currentTime.tm_min).rjust(2, '0')}:{str(currentTime.tm_sec).rjust(2, '0')}")
                 if squadron['data']['time'].split(' ', 1)[1][:-1] != (formattedTime[:-1]):
-                    squadron['data'] = gather.getData(squadron['tag'])
+                    squadron['data'] = await gather.getData(squadron['tag'])
 
                 # If there is a previous data set, check for differences between it and the current set.
                 if squadron['prevData']:
@@ -155,7 +155,7 @@ async def scheduler(self):
             if not active:
                 sessionDate = (f"US Session - {currentTime.tm_mday}/{currentTime.tm_mon}/{currentTime.tm_year}")
                 for squadron in squadronList:
-                    squadron['data'] = gather.getData(squadron['tag'])
+                    squadron['data'] = await gather.getData(squadron['tag'])
                     squadron['wins'] = 0
                     squadron['losses'] = 0
                     squadron['startingPoints'] = str(squadron['data']['points'])
@@ -167,7 +167,7 @@ async def scheduler(self):
             for squadron in squadronList:
                 formattedTime = (f"{str(currentTime.tm_hour).rjust(2, '0')}:{str(currentTime.tm_min).rjust(2, '0')}:{str(currentTime.tm_sec).rjust(2, '0')}")
                 if squadron['data']['time'].split(' ', 1)[1][:-1] != (formattedTime[:-1]):
-                    squadron['data'] = gather.getData(squadron['tag'])
+                    squadron['data'] = await gather.getData(squadron['tag'])
 
                 # If there is a previous data set, check for differences between it and the current set.
                 if squadron['prevData']:
@@ -222,7 +222,7 @@ async def scheduler(self):
 
             for squadron in squadronList:
                 # Gather data from the squadron's page on WT website, create object with usable attributes.
-                squadron['data'] = gather.getData(squadron['tag'])
+                squadron['data'] = await gather.getData(squadron['tag'])
 
                 # If there is a previous data set, check for differences between it and the current set.
                 # Determine if these are as a result of wins/losses/member changes. Update session message.
@@ -235,7 +235,7 @@ async def scheduler(self):
             squadron['prevData'] = squadron['data']
             await asyncio.sleep(int(config("IDLE_INTERVAL")))
 
-        # Inform the user that the tracker loop has stopped.
+        # Inform the user that the tracker loop has stopped. (posts to bot-test channel in test server)
         if await self.getSwitch() == False:
             await self.bot.get_channel(1024425191360708611).send(':stop_button: `Tracker stopped`')
 
@@ -243,7 +243,7 @@ async def scheduler(self):
 async def createSquadronList(self):
     squadronList = []
     for squadron in ['xTHCx', 'vTHCv']:
-        channel = self.bot.get_channel(int(config(f"{squadron.upper()}_WL_CHANNEL"))) #_WL_CHANNEL")) #_TEST_CHANNEL"))
+        channel = self.bot.get_channel(int(config(f"{squadron.upper()}_TEST_CHANNEL"))) #_WL_CHANNEL")) #_TEST_CHANNEL"))
         squadronList.append({'tag': squadron, 'data': None, 'prevData': None,
             'channel': channel, 'activeMessage': None, 'messageArray': [], 'startingPoints': None, 'wins': 0, 'losses': 0})
     return squadronList

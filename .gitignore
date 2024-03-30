@@ -1,3 +1,5 @@
 .env
 venv/
-linktoaltsource.txt
+squadronData/
+cogs/__pycache__/
+cogs/helpers/__pycache__/

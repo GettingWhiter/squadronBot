@@ -1,6 +1,6 @@
 # Discord bot for WT Squadrons by Robert White
 
-# 17/05/23
+# 17/05/23 - 18/03/24
 # Main part of the bot.
 # Uses 'hot-swappable' cogs for each command to make maintenance less disruptive. 
 
