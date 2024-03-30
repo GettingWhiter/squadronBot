@@ -1,7 +1,7 @@
 <b>Introduction</b>
 
 A discord bot built with discord.py for War Thunder Squadrons actively participating in squadron battles (SQBs/SREs - Squadron Realistic Events).
-
+This branch is version 2, with a few improvements to some aspects before addition of a database.
 
 
 <b>Setup</b>
