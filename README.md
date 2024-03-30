@@ -1,6 +1,7 @@
 <b>Introduction</b>
 
 A discord bot built with discord.py for War Thunder Squadrons actively participating in squadron battles (SQBs/SREs - Squadron Realistic Events).
+This branch is version 1, the bot as it was when in use within the Try Hard Coalition in early 2023.
 
 
 
