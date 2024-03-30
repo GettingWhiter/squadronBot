@@ -7,7 +7,7 @@ This branch is version 1, the bot as it was when in use within the Try Hard Coal
 
 <b>Setup</b>
 
-Create the virtual enviornment, open a command prompt and type: 
+Create the virtual environment, open a command prompt and type: 
 
 python -m venv c:\squadronBot\venv
 
