@@ -24,6 +24,7 @@ from decouple import config
 async def saveData(squadron):
     squadronInfo = await getData(squadron)
     # Export squadronInfo as squadronData.json 
+    
     # TODO: create a folder if one does not already exist
     filePath = 'squadronData/' + squadronInfo['tag'] + datetime.datetime.now().strftime("-%Y%m%d-%H%M%S") +'.json'
     with open(filePath, 'w') as outfile:
