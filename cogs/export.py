@@ -49,7 +49,7 @@ class export_class(commands.Cog):
     #@app_commands.guilds(123) # Replace 123 with the server id.
     async def export(self, ctx: commands.Context, squadron: str):
 
-        filePath = gather.saveData(squadron)
+        filePath = await gather.saveData(squadron)
         await ctx.send(file=discord.File(filePath))
         print(f"{squadron} squadronData saved and exported.")
 

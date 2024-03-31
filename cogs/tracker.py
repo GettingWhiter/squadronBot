@@ -19,6 +19,8 @@ from cogs.helpers import gather, check
 
 # ----- 
 
+# TODO: track win loss for individual players over the course of a season using the information already being gathered once a database is added.
+
 class tracker_class(commands.Cog):
     # Constructor
     def __init__(self, bot):
