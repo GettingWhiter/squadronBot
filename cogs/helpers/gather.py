@@ -55,7 +55,8 @@ async def scraper(url):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=60) as response:
-                    content = BeautifulSoup(await response.text(), "lxml")
+                    response.raise_for_status() # Exception if status is not 200
+                    content = BeautifulSoup(await response.text(), "lxml") # TODO BS4 async?
 
             if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
                 return parser(content)
