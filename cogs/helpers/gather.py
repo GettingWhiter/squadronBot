@@ -55,7 +55,8 @@ async def scraper(url):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=60) as response:
-                    content = BeautifulSoup(await response.text(), "lxml")
+                    response.raise_for_status() # Exception if status is not 200
+                    content = BeautifulSoup(await response.text(), "lxml") # TODO BS4 async?
 
             if content.find('div', attrs={"class": "squadrons-info__title"}) != None:
                 return parser(content)
@@ -63,12 +64,10 @@ async def scraper(url):
                 print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
                 asyncio.sleep(config("RETRY_INTERVAL"))
                 await scraper(url)
-
-        #except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
-        #    print('Timeout raised and caught.')
-        #    return
-        except Exception as e:
-            await print(f"Error raised in 'gather.scraper' function: {e}")
+        except (aiohttp.ClientError, aiohttp.InvalidURL, aiohttp.ClientResponseError) as e:
+            print(f'Error during scraping: {e}')
+        #except Exception as e:
+        #    await print(f"Error raised in 'gather.scraper' function: {e}")
         return
 
 # Parser for content scraped from the War Thunder squadron pages
