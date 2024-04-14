@@ -64,12 +64,10 @@ async def scraper(url):
                 print(f"Scraper failed to retrieve usable webpage content, retrying in {config('RETRY_INTERVAL')} seconds.\nContent retrieved: {content}")
                 asyncio.sleep(config("RETRY_INTERVAL"))
                 await scraper(url)
-
-        #except (aiohttp.exceptions.Timeout, aiohttp.exceptions.ReadTimeout):
-        #    print('Timeout raised and caught.')
-        #    return
-        except Exception as e:
-            await print(f"Error raised in 'gather.scraper' function: {e}")
+        except (aiohttp.ClientError, aiohttp.InvalidURL, aiohttp.ClientResponseError) as e:
+            print(f'Error during scraping: {e}')
+        #except Exception as e:
+        #    await print(f"Error raised in 'gather.scraper' function: {e}")
         return
 
 # Parser for content scraped from the War Thunder squadron pages
