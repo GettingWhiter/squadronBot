@@ -37,8 +37,6 @@ class export_class(commands.Cog):
     @commands.hybrid_command(name="export", description="Exports squadronData to a JSON file.", aliases=["e"])
     # Add cooldown to your command.
     @commands.cooldown(1, 15.0, commands.BucketType.user)
-    # Declare that only owner may use this command.
-    @commands.is_owner()
     # Declare that only users with a specific role may use this command.
     @commands.has_any_role(573055362425683979, "Bot admin") # role id or role name.
     # Describe the command's parameter.

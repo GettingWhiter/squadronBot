@@ -38,8 +38,6 @@ class tracker_class(commands.Cog):
     @commands.hybrid_command(name="tracker", description="Start/Stop the logging functionality of the bot.", aliases=["s"])
     # Add cooldown to your command.
     @commands.cooldown(1, 15.0, commands.BucketType.user)
-    # Declare that only owner may use this command.
-    @commands.is_owner()
     # Declare that only users with a specific role may use this command.
     @commands.has_any_role(573055362425683979, "Bot admin") # role id or role name.
     # Describe the command's parameter.
