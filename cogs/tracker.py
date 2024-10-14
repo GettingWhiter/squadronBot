@@ -41,7 +41,7 @@ class tracker_class(commands.Cog):
     # Declare that only owner may use this command.
     @commands.is_owner()
     # Declare that only users with a specific role may use this command.
-    @commands.has_any_role(1024425187371929678, "Commander Social") # Can be role id or role name.
+    @commands.has_any_role(573055362425683979, "Bot admin") # role id or role name.
     # Describe the command's parameter.
     @app_commands.describe(switch="Select a parameter")
     # Give a list of parameters accepted.

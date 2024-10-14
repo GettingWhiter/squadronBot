@@ -28,7 +28,7 @@ class rank_class(commands.Cog):
     # Add cooldown to your command.
     @commands.cooldown(1, 15.0, commands.BucketType.user)
     # Declare that only users with a specific role may use this command.
-    @commands.has_any_role(1024425187371929678, "Commander Social") # Can be role id or role name.
+    @commands.has_any_role(573055362425683979, "Bot admin") # role id or role name.
     # Describe the <command> parameter.
     @app_commands.describe(command="Select the command you wish to know more about.")
     # Give a list of options the parameter <command> accepts.
