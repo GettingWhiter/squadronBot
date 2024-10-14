@@ -242,8 +242,8 @@ async def scheduler(self):
 
 async def createSquadronList(self):
     squadronList = []
-    for squadron in ['xTHCx', 'vTHCv']:
-        channel = self.bot.get_channel(int(config(f"{squadron.upper()}_WL_CHANNEL"))) #_WL_CHANNEL")) #_TEST_CHANNEL"))
+    for squadron in ['xTHCx']: #, 'vTHCv']:
+        channel = self.bot.get_channel(int(config(f"{squadron.upper()}_TEST_CHANNEL"))) #_WL_CHANNEL")) #_TEST_CHANNEL"))
         squadronList.append({'tag': squadron, 'data': None, 'prevData': None,
             'channel': channel, 'activeMessage': None, 'messageArray': [], 'startingPoints': None, 'wins': 0, 'losses': 0})
     return squadronList
